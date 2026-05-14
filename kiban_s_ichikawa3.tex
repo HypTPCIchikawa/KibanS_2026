@@ -1,0 +1,189 @@
+%\documentclass[11pt,a4paper,uplatex,dvipdfmx]{ujarticle} 		% for uplatex
+\documentclass[11pt,a4j,dvipdfmx]{jarticle} 					% for platex
+\input{pieces/form00_header} % pieces
+\input{pieces/kakenhi7} % pieces
+\input{pieces/form01_header} % pieces
+\input{pieces/form02_2027_header} % pieces
+\input{pieces/hook3} % pieces
+%#Name: kiban_s
+\input{pieces/form04_jsps_headers} % pieces
+\input{pieces/form04_kiban_s_header} % pieces
+% ===== Global definitions for the Kakenhi form ======================
+\newcommand{\研究課題名}{加速器実験による短距離バリオン間相互作用の解明と中性子星ハイペロンパズルの解決}
+\newcommand{\研究機関名}{東北大学}
+\newcommand{\研究代表者氏名}{市川裕大}
+\newcommand{\me}{\underline{\underline{Y.~Ichikawa}}}
+\newcommand{\研究期間の最終元号年度}{13}
+%=====================================================================
+
+\input{pieces/inst_general_images} % pieces
+\input{pieces/inst_kiban_s} % pieces
+% ===== my favorite packages ====================================
+\usepackage{amsmath}
+\usepackage{wrapfig}
+\usepackage{capt-of}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{positioning,shapes.geometric,arrows.meta,calc}
+\usepackage{lineno}
+
+% ===== my personal definitions ==================================
+\newcommand{\klpionn}{K_L \to \pi^0 \nu \overline{\nu}}
+\newcommand{\kppipnn}{K^+ \to \pi^+ \nu \overline{\nu}}
+
+\newcommand{\paper}[6]{\item ``#1'', #2, #3 {\bf #4}, #5 (#6).}
+\newcommand{\etal}{\textit{et al.\ }}
+\newcommand{\ca}[1]{*#1}
+\newcommand{\invitedtalk}{招待講演}
+\newcommand{\yukawa}{H.~Yukawa}
+\newcommand{\tomonaga}{S.~Tomonaga}
+\newcommand{\prl}{Phys.\ Rev.\ Lett.\ }
+\newcommand{\memo}[1]{\marginpar{#1}}
+
+\input{pieces/hook5} % pieces
+
+\begin{document}
+\input{pieces/hook7} % pieces
+%#Split: 01_purpose_plan  
+%#PieceName: p01_purpose_plan
+\input{pieces/p01_purpose_plan_00}
+\section{研究目的、研究方法など}
+%　　　　＜＜最大　6ページ＞＞
+
+\noindent
+\textbf{（概要）}\\
+	本研究の目的は、超高密度天体である中性子星の最大難問「ハイペロンパズル」の解決に向け、ハドロン加速器実験の新手法により、$\Lambda$粒子と核子間の短距離相互作用を完全解明することである。
+	理論上、真空中の引力源泉として$\Sigma$遷移を伴う「$2\pi$交換プロセス」が有力視される一方、高密度媒質中ではパウリ抑制により同プロセスが消滅し、短距離からの強い斥力が支配的になるという仮説がある。
+	本研究では、この斥力化シナリオに決着をつけるため、(1) $\Sigma N$カスプ分光（E90実験）による結合力の高精度決定、(2) $\alpha\Lambda$フェムトスコピー（E88/STAR実験）を用いた中心密度$2\rho_0$極小ソースによる短距離斥力芯の抽出、および(3) カイラル有効場の理論（Chiral EFT）モデルへの統合解析を展開する。斥力化のみでパズルを説明し得ない場合はクォーク物質への相転移シナリオが濃厚となり、極限物質観に劇的な変革を迫る。
+
+\noindent
+\rule{\linewidth}{1pt}\\
+\noindent
+\textbf{（本文）}\\
+本研究の全体像を図\ref{fig:overview}に示す。
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[
+    box/.style={draw, rounded corners=2pt, thick, align=center, inner sep=2pt},
+    arrow/.style={->, >=latex, thick, draw=gray!80!black},
+    lbl/.style={fill=white, inner sep=1pt, font=\scriptsize}
+  ]
+    \node[box, fill=orange!5, draw=orange!80!black, text width=4.8cm] (e88) {
+      \textbf{$\alpha\Lambda$フェムトスコピー}\\
+      {\scriptsize (J-PARC E88 / STAR)}\\
+      {\scriptsize ［代表：市川 ／ 分担：佐甲・大浦］}\\
+      \rule{4.5cm}{0.4pt}\\
+      \textcolor{orange!80!black}{\textbf{高密度下での斥力化実証}}\\
+      {\scriptsize 中心密度$2\rho_0$極小ソース活用}\\
+      {\scriptsize パウリ抑制による斥力芯顕在化を抽出}
+    };
+    \node[box, fill=blue!5, draw=blue!60!black, text width=4.8cm, left=0.1cm of e88] (e90) {
+      \textbf{$\Sigma N$カスプ分光}\\
+      {\scriptsize (J-PARC E90)}\\
+      {\scriptsize ［代表：市川 ／ 分担：谷田］}\\
+      \rule{4.5cm}{0.4pt}\\
+      \textcolor{blue!80!black}{\textbf{真空中の引力源泉確定}}\\
+      {\scriptsize $\Lambda N$-$\Sigma N$結合力決定}\\
+      {\scriptsize $2\pi$交換プロセスの定量的寄与確立}
+    };
+    \node[box, fill=green!5, draw=green!60!black, text width=4.8cm, right=0.1cm of e88] (hyps) {
+      \textbf{$\Lambda p$散乱実験}\\
+      {\scriptsize (HYPS / E86等)}\\
+      {\scriptsize ［研究協力者：三輪 ほか］}\\
+      \rule{4.5cm}{0.4pt}\\
+      \textcolor{green!80!black}{\textbf{真空中短距離力の基準}}\\
+      {\scriptsize 中高エネルギー散乱データ取得}\\
+      {\scriptsize 真空中の裸の斥力芯サイズを直接測定}
+    };
+    \node[box, fill=brown!5, draw=brown!60!black, text width=12cm, below=0.3cm of e88] (theory) {
+      \textbf{理論研究} {\footnotesize （Chiral EFT）} {\scriptsize ［分担：神野・神谷］}\\
+      {\scriptsize 実験データを統合し、高密度まで適用可能な「密度依存性バリオン間相互作用モデル」を構築}
+    };
+    \node[box, fill=red!5, draw=red!70!black, very thick, text width=13cm, below=0.3cm of theory] (goal) {
+      \textbf{最終目標：中性子星ハイペロンパズルの解明}\\
+      \rule{12cm}{0.4pt}\\
+      {\footnotesize \textcolor{red!70!black}{\textbf{斥力化シナリオの実証}}：高密度パウリ抑制によるEoS硬化 $\to$ $2M_\odot$中性子星を支持}\\
+      {\scriptsize （※斥力不十分な場合は「クォーク物質への相転移シナリオ」へと決着）}
+    };
+    \draw[arrow] (e90.south) -- node[lbl, pos=0.4] {引力・結合力} (theory.north -| e90.south);
+    \draw[arrow] (e88.south) -- node[lbl, pos=0.4] {高密度斥力芯} (theory.north);
+    \draw[arrow] (hyps.south) -- node[lbl, pos=0.4] {真空中基準力} (theory.north -| hyps.south);
+    \draw[arrow, very thick, draw=red!70!black] (theory.south) -- node[lbl, text=red!70!black] {極限状態方程式(EoS)導出} (goal.north);
+  \end{tikzpicture}
+  \caption{本研究の全体像。}
+  \label{fig:overview}
+\end{figure}
+
+\subsection{学術的背景、問い、着想に至った経緯}
+超高密度天体である中性子星の中心部には、標準原子核密度（$\rho_0 \sim 0.17\,\text{fm}^{-3}$）の数倍の極限環境が実現している。高密度化に伴いストレンジクォークを含むハイペロン（特に$\Lambda$粒子）の出現が熱力学的必然となる。$\Lambda$ハイパー核分光から標準密度でのポテンシャルは約 $-30\,\text{MeV}$ と引力的であることが確定している。しかし、標準理論に基づく状態方程式（EoS）予測では、ハイペロン出現によりEoSが軟化し、確定している太陽質量の2倍（$2M_\odot$）の星を支えられずブラックホールへ崩壊する。これが「ハイペロンパズル」である。
+
+解決策として、高密度下での「斥力化シナリオ」と「クォーク物質への相転移シナリオ」が議論されている。核心的な問いは**「核物理はハイペロンパズルを解くことができるのか？」**である。深部環境の地上再現は困難なため、申請者は**「高密度下で$\Lambda$粒子が強い斥力を感じ得るのか？」**という検証可能な問いに着想を得た。実験データから斥力化の正否を検証し、斥力不十分な場合は状況証拠的に相転移シナリオを裏付ける。斥力芯探求こそが相転移立証への鋭利なアプローチである。
+
+\subsection{本研究の目的、研究内容、独自性と創造性}
+本研究の目的は、相互作用の短距離成分を完全解明することである。真空中で引力を生む起源として$\Sigma$遷移を伴う「$2\pi$交換プロセス」が有力視される。引力への定量的寄与を確定させるため、$\Lambda N$-$\Sigma N$結合力をE90実験の「$\Sigma N$カスプ分光」によって抽出する。一方、高密度中ではパウリ抑制によってこの遷移が阻害され、短距離斥力芯が支配的になるという仮説がある。本研究では、中心密度が $2\rho_0$ に達する$\alpha$粒子に着目し、「$\alpha\Lambda$フェムトスコピー」によって極小ソースから斥力芯を抽出する。三輪らの散乱実験による真空中基準力と理論計算を統合し決着をつける。
+
+\subsubsection{研究内容の詳細と到達目標}
+
+\noindent
+\textbf{1. $\Sigma N$カスプ分光（E90実験）による結合力の決定（分担者：市川、谷田）}\\
+半世紀前の反応測定において、$\Sigma N$閾値直下に観測された「$\Sigma N$カスプ」構造は、生成された$\Sigma N$対が中間状態で $\Sigma N \to \Lambda N$ へ強くチャンネル転換することに起因する。遷移振幅 $T$ は散乱長 $A_\Sigma = a + i b$ を用いて $T \propto \operatorname{Im}(A_\Sigma)/(1 - i k_\Sigma A_\Sigma)$ と記述され、虚部 $b$ は本研究が標的とする**「$\Lambda N$-$\Sigma N$間の結合力」**を直接表す。反応率 $R \propto |T|^2$ は閾値上・下においてそれぞれ $R_{E > M_\Sigma + M_N} \sim 4\pi b / [(1 + k_\Sigma b)^2 + (k_\Sigma a)^2]$、および $R_{E < M_\Sigma + M_N} \sim 4\pi b / [(1 - |k_\Sigma| a)^2 + (|k_\Sigma| b)^2]$ と展開される。スペクトル形状を高精度測定することで実部と虚部を導出できる。J-PARC E90実験では、K1.8ラインとS-2S検出器により運動量を極限精度で測定し、分解能 $\sigma \sim 0.4\,\text{MeV}$ で捉える。飛跡検出器HypTPCで崩壊対を同時検出し背景事象を排除することで、散乱長を $0.3\,\text{fm}$ の精度で確定させる。
+
+\vspace*{0.5zw}
+\noindent
+\textbf{2. $\alpha\Lambda$フェムトスコピーによる高密度媒質中短距離力の解明（分担者：市川・佐甲・大浦）}\\
+${}^5_\Lambda\mathrm{He}$ 束縛エネルギーのみでは短距離ポテンシャルに甚大な不定性が残る。斥力芯の実在証明が不可欠である。運動量相関から相互作用を調べるフェムトスコピーにおいて、相関関数 $C(k^*)$ の理論計算（神野・神谷）によれば、大ソースサイズでは全モデルが縮退するが、極小ソースサイズ $R = 1\,\text{fm}$ の環境下では波動関数が短距離ポテンシャルの違いを鋭く拾い上げ、斥力芯の有無で決定的な差異が生じることが判明した。本研究では、生成断面積が増大する中高エネルギー領域に着目し、J-PARC E88実験（$pA$衝突）およびRHIC-STAR実験（$AA$衝突）で測定を実行する。特にE88実験では全事象を記録可能な「ストリーミングDAQシステム」を導入し、極小サイズが保証される反応からのデータを確実に捉える。
+
+\vspace*{0.5zw}
+\noindent
+\textbf{3. 実験データを基にした理論研究（分担者：神野・神谷）}\\
+得られたデータをカイラル有効場の理論（Chiral EFT）へ統合し、包括的相互作用モデルを構築する。最大質量予測を行いパズル解決に最終結論を下す。
+
+\subsection{学術的独自性と創造性、国内外の研究動向と位置づけ}
+ハイペロン標的が不可能な散乱実験に対し、重水素標的を用いて**「特定のスピン状態を選択した散乱長の決定」**を実現する点が独自性である。さらにフェムトスコピーを**「原子核（$\alpha$粒子）とハドロンの相関」**に拡張し、中心密度 $2\rho_0$ のプローブと極小ソースの相乗効果で短距離斥力芯のみを劇的に増幅させて抽出する。
+真空中の長距離力はALICE/STARが進め、短距離力は三輪らの散乱実験（HYPS/E86）が進行中である。本研究は静止標的の特性で極小ソースを実現し、引力源泉と高密度斥力芯を同時に決定する。世界的進展と相補的な関係を築きつつ決定打を放つ**唯一無二の国際的ポジション**にある。
+
+\subsection{本研究の目的を達成するための準備状況}
+主要拠点であるJ-PARC K1.8ビームラインは大強度ビームの利用が保証されている。
+\begin{itemize}
+    \item \textbf{E90実験}：Stage-1承認およびTDR提出を完了し、S-2S検出器改良を進め、2028年のデータ取得へ準備は最終段階にある。
+    \item \textbf{連携体制}：分担者の神谷はALICE相関解析で実績があり連携を維持する。HYPS実験用TPC開発も順調である。
+    \item \textbf{E88/STAR実験}：E88はストリーミングDAQ回路開発に着手し、2026年に追加提案書を提出予定。STAR-BESデータは取得完了し、即座に解析を開始する体制である。
+\end{itemize}
+
+%end 研究目的と研究計画	 ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+\input{pieces/p01_purpose_plan_01}
+
+%#Split: 02_rights  
+%#PieceName: p02_rights
+\input{pieces/p02_rights_00}
+\section{２　人権の保護及び法令等の遵守への対応}
+\input{pieces/p02_rights_01}
+
+%#Split: 03_final_year  
+%#PieceName: p03_final_year
+\input{pieces/p03_final_year_00}
+\section{３　研究計画最終年度前年度応募を行う場合の記述事項}
+%begin 最終年度の研究課題　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+\newcommand{\最終年度研究種目名}{基盤研究（）}
+\newcommand{\最終年度研究課題番号}{?????}
+\newcommand{\最終年度研究課題名}{}
+\newcommand{\最終年度研究期間}{令和？？年度〜令和\一年目 年度}
+%end 最終年度の研究課題　＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+\input{pieces/p03_final_year_01}
+
+\noindent
+\textbf{当初研究計画及び研究成果}\\
+\noindent
+\textbf{前年度応募する理由}\\
+
+\input{pieces/p03_final_year_02}
+
+%#Split: members_info % keep
+\KLInput{daihyo_info}
+\KLInput{buntansha_info}
+
+%#Split: 99_tail
+\input{pieces/hook9} % pieces
+\end{document}
